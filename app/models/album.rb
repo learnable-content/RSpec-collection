@@ -9,6 +9,11 @@
 #
 
 class Album < ActiveRecord::Base
+  has_many :cart_items, dependent: :delete_all
+  has_many :users, through: :cart_items
+
   validates :title, presence: true
   validates :title, length: {maximum: 100}
+
+  scope :popular, -> { where(popular: true) }
 end
