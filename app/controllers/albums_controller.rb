@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: albums
+#
+#  id         :integer          not null, primary key
+#  title      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  popular    :boolean          default(FALSE)
+#
+
 class AlbumsController < ApplicationController
   def index
     @albums = Album.order('created_at DESC')

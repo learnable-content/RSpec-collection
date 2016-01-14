@@ -9,14 +9,10 @@
 #  popular    :boolean          default(FALSE)
 #
 
-FactoryGirl.define do
-  factory :album do
-    title Faker::Book.title
-
-    trait :popular do
-      popular true
-    end
-
-    factory :popular_album, traits: [:popular]
+module AlbumsHelper
+  def with_status(album)
+    title = album.title
+    title += content_tag(:small, "hot!") if album.popular?
+    title.html_safe
   end
 end

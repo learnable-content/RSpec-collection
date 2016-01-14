@@ -6,6 +6,7 @@
 #  title      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  popular    :boolean          default(FALSE)
 #
 
 require 'rails_helper'
