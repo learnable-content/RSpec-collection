@@ -9,6 +9,18 @@
 </head>
 <body>
 
+<header>
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+  <% if current_user %>
+    You are logged in as <%= current_user.name %>
+    <%= render 'shared/cart' %>
+  <% end %>
+</header>
+
 <div id="content">
   <%= yield %>
 </div>

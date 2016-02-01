@@ -1,6 +1,6 @@
-# RSpec with Rails - Step 5
+# RSpec with Rails - Step 6
 
-Source code for the series of screencasts "RSpec with Rails" on Sitepoint. This is step 5, [Routes, Views and Helper Testing]().
+Source code for the series of screencasts "RSpec with Rails" on Sitepoint. This is step 6, [Feature Testing]().
 
 Navigate to the [master branch](https://github.com/learnable-content/RSpec-collection/tree/master) to see full list of videos and the corresponding steps.
 

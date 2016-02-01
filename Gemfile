@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.1.5'
 
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.5.1'
 gem 'email_validator'
 
 group :development do
@@ -11,13 +10,14 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'pry-rails'
+  gem 'faker'
 end
 
 group :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'faker'
+  gem 'capybara-screenshot'
 end
 
 # Use sqlite3 as the database for Active Record

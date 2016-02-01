@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 20151208180415) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.boolean  "popular",    default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean  "popular"
   end
 
   add_index "albums", ["popular"], name: "index_albums_on_popular"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20151208180415) do
   create_table "cart_items", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "album_id"
-    t.integer  "quantity",   default: 1, null: false
+    t.integer  "quantity",   default: 1
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
